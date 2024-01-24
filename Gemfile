@@ -25,6 +25,8 @@ gem 'jwt','~>2.2'
 # cors
 gem 'rack-cors', require: 'rack/cors'
 
+gem 'active_model_serializers'
+
 
 
 # Use Active Storage variant

@@ -1,9 +1,7 @@
 require 'test_helper'
 
-class StudentTest < ActiveSupport::TestCase
+class VerifytokenControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-
- 
 end

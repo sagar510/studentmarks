@@ -1,6 +1,6 @@
 class MemberController < ApplicationController
 
-    before_action :authorize_request,:authorize_admin
+    before_action :authorize_request
 
     def createuserandmember
         youradmin = Admin.find_by(user_id:@current_user.id)
@@ -47,9 +47,13 @@ class MemberController < ApplicationController
         #@data = Student.select(:id,:student_name,:admin_id)
         #@data = User.joins(:student).select(:id,:student_name,:email,:admin_id)
         #@data = User.joins(:student)
-        @data1 = User.joins(student: :admin).select(:id,:student_name,:email,:admin_name)
-        @data2 = User.joins(teacher: :admin).select(:id,:teacher_name,:email,:admin_name)
-        @data3 = User.joins(:admin).select(:id,:admin_name,:email)
-        render json: {"student":@data1,"teacher":@data2,"admin":@data3}     
+        #@data1 = User.joins(student: :admin).select(:id,:student_name,:email,:admin_name)
+        #@data2 = User.joins(teacher: :admin).select(:id,:teacher_name,:email,:admin_name)
+        #@data3 = User.joins(:admin).select(:id,:admin_name,:email)
+        #render json: {"student":@data1,"teacher":@data2,"admin":@data3}  
+
+        all = User.all
+        
+        render json: all, include: ['student.admin,teacher.admin,admin']
     end
 end

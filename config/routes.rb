@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   get 'viewcourses', to: 'course#viewcourses'
   post 'createcourse', to: 'course#createcourse'
+  post 'verifytoken', to: 'verifytoken#verifytoken'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
