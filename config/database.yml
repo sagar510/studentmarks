@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: studentmarks_production
-  username: studentmarks
+  database: freedb_studentmarks_production
+  host: sql.freedb.tech
+  username: freedb_studentmarks
   password: <%= ENV['STUDENTMARKS_DATABASE_PASSWORD'] %>
