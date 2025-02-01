@@ -128,6 +128,8 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-linux)
+      racc (~> 1.4)
     psych (3.3.4)
     public_suffix (5.0.4)
     puma (4.3.12)
@@ -232,6 +234,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
+  x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
