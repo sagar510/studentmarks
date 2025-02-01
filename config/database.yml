@@ -55,6 +55,7 @@ production:
   host: sql.freedb.tech
   port: 3306
   username: freedb_studentmarks
+  allow_public_key_retrieval: true 
   password: <%= ENV['STUDENTMARKS_DATABASE_PASSWORD'] %>
   ssl_mode: required # Add if SSL is needed
   connect_timeout: 20 # Increase timeout if necessary
