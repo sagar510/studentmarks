@@ -51,11 +51,10 @@ production:
   <<: *default
   adapter: mysql2
   encoding: utf8mb4
-  database: freedb_studentmarks_production
-  host: sql.freedb.tech
-  port: 3306
-  username: freedb_studentmarks
+  database: defaultdb
+  host: mysql-9a99005-sagarpa786t-3460.f.aivencloud.com
+  port: 23464
+  username: avnadmin
   allow_public_key_retrieval: true 
   password: <%= ENV['STUDENTMARKS_DATABASE_PASSWORD'] %>
   ssl_mode: required # Add if SSL is needed
-  connect_timeout: 20 # Increase timeout if necessary
